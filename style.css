@@ -1,0 +1,189 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ffb6c1,#ffd6e7);
+    overflow:hidden;
+}
+
+.slide{
+    display:none;
+    width:100%;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    animation:fadeIn 1s;
+}
+
+.active{
+    display:flex;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* BOX */
+
+.box{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    max-width:600px;
+}
+
+/* LOGIN */
+
+input{
+    width:250px;
+    padding:12px;
+    margin:10px auto;
+    display:block;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+#error{
+    color:red;
+    margin-top:10px;
+}
+
+/* BUTTON */
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#ff4d88;
+    color:white;
+    cursor:pointer;
+    margin-top:15px;
+    font-size:16px;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* WELCOME */
+
+.heart-loading{
+    font-size:35px;
+    margin-top:20px;
+    animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* SLIDE KALENDER */
+
+#slide2{
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+.calendar-section{
+    background:white;
+    padding:15px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.calendar-img{
+    width:220px;
+    max-width: 100%;
+    border-radius:15px;
+}
+
+.love-section{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.main-photo{
+    width:180px;
+    border-radius:20px;
+    margin:15px 0;
+}
+
+/* GALERI */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    background:white;
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.gallery img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* VIDEO */
+
+video{
+    width:700px;
+    max-width:90%;
+    border-radius:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    #slide2{
+        flex-direction:column;
+    }
+
+    .calendar-img{
+        width:250px;
+    }
+
+    .gallery img{
+        width:150px;
+        height:150px;
+    }
+
+}
